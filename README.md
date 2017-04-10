@@ -1,2 +1,2 @@
-# ES6_playground
-Hands on ES6
+# ES6 playground
+Hands on ES6 features

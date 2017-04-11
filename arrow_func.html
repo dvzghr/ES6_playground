@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+    <script type="text/babel">
+
+        var studentList = students => console.log(JSON.stringify(students));
+
+        studentList(["Joe", "Cindy", "Jim", "John", "Jake"]);
+
+        //scope handling
+        var person = {
+            name: "Peter",
+            actions: ['run', 'jump', 'hike'],
+            printActions() {
+                console.log(
+                    this.actions.forEach(
+                        action => console.log(`${this.name} likes to ${action}`)
+                    )
+                )
+            }
+        };
+
+        person.printActions();
+
+    </script>
+
+    <title>Arrow functions</title>
+</head>
+<body>
+<header>
+
+</header>
+</body>
+
+</html>

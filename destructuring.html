@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+    <script type="text/javascript">
+
+        // var names don't have to match!!!
+        var [first, , , fourth] = ["Zagreb", "Split", "Rijeka", "Osijek"];
+
+        console.log(first);
+        console.log(fourth);
+        //console.log(sixth);
+
+        var sandwich = {
+            title: "ham & cheese",
+            price: 20,
+            description: "very delicious sandwich with ham and cheese",
+            ingredients: ['bread', 'ham', 'cheese', 'ketchup']
+        };
+
+        // var names must match!!!
+        var {title, ingredients} = sandwich;
+
+        console.log(title);
+        console.log(JSON.stringify(ingredients));
+        //console.log(ingredients);
+
+        function printSandwich({title, price, ingredients}) {
+            console.log(`${title} costs ${price}`);
+            ingredients.forEach(
+                ingredient => console.log(ingredient)
+            )
+        }
+
+        printSandwich(sandwich);
+
+    </script>
+
+    <title>Destructuring</title>
+</head>
+<body>
+<header>
+
+</header>
+</body>
+
+</html>

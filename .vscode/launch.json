@@ -15,7 +15,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch es6",
-            "file": "${workspaceRoot}/es6.html",
+            "file": "${workspaceRoot}/generators.html",
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
             "userDataDir": "${workspaceRoot}/.vscode/chrome"

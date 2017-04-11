@@ -1,13 +1,21 @@
 {
     "version": "0.2.0",
     "configurations": [
-
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against file",
+            "name": "Launch start",
             //"url": "http://localhost:8080/start.html",
             "file": "${workspaceRoot}/start.html",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "userDataDir": "${workspaceRoot}/.vscode/chrome"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch es6",
+            "file": "${workspaceRoot}/es6.html",
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
             "userDataDir": "${workspaceRoot}/.vscode/chrome"

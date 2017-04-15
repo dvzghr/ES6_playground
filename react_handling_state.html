@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.js"></script>
+    <script type="text/babel">
+
+        class Restaurant extends React.Component {
+            constructor(){
+                super();
+                this.state = {
+                    status: "not open"
+                };
+                this.openRestaurant = this.openRestaurant.bind(this);
+                this.closeRestaurant = this.closeRestaurant.bind(this);
+            }
+
+            openRestaurant(){
+                this.setState({
+                    status: "open"
+                });
+            }
+
+            closeRestaurant(){
+                this.setState({
+                    status: "not open"
+                });
+            }
+
+            render() {
+                return (<div>
+                    <h1>{this.props.name}</h1>
+                    <p>The restaurant is {this.state.status}.</p>
+                    <button onClick={this.openRestaurant}>Open Restaurant</button>
+                    <button onClick={this.closeRestaurant}>Close Restaurant</button>
+                </div>)
+            }
+        }
+
+        ReactDOM.render(<Restaurant name="My restaurant in ES6"></Restaurant>, document.getElementById('react-app'));
+
+    </script>
+
+    <title>React handling state with ES6</title>
+</head>
+<body>
+<header>
+
+</header>
+    <div id="react-app"></div>
+</body>
+
+</html>

@@ -4,8 +4,7 @@
   "description": "",
   "main": "script.js",
   "dependencies": {
-    "babel": "^6.23.0",
-    "babel-polyfill": "^6.23.0"
+    "babel": "^6.23.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

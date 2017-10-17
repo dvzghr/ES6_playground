@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+    <script type="text/javascript">
+
+        const spaceNames = async () => {
+            try {
+                const resp = await fetch('http://api.open-notify.org/astros2.json');
+                const data = await resp.json();
+                const names = data.people
+                    .map(p => p.name)
+                    .join(', ');
+                console.log(names);
+            }
+            catch (err) {
+                console.log('Data could not load: ', err);
+            }
+        }
+
+        spaceNames();
+
+        // const spaceNames = () => fetch('http://api.open-notify.org/astros.json').then(res => res.json());
+
+        // spaceNames()
+        //     .then(data => data.people)
+        //     .then(people => people.map(p => p.name))
+        //     .then(names => names.join(', '))
+        //     .then(console.log);
+
+    </script>
+
+    <title>Async await</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+</body>
+
+</html>
